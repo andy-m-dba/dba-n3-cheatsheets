@@ -55,6 +55,23 @@
 
 **Sécurité :** diagnostics en lecture seule ; les contrôles lourds et toute action corrective nécessitent autorisation, évaluation du RPO/RTO, plan de reprise et validation applicative.
 
+## MongoDB
+
+| Situation | Fiche |
+|---|---|
+| Incident critique / RCA | [00 — Triage expert & RCA](mongodb/00-triage-rca.md) |
+| Primaire / élections / rollback | [01 — Élections & rollback](mongodb/01-elections-rollback.md) |
+| Oplog / CDC | [02 — Oplog & change streams](mongodb/02-oplog-change-streams.md) |
+| Crash / corruption | [03 — Intégrité & WiredTiger](mongodb/03-integrite-wiredtiger.md) |
+| Shards / catalogue | [04 — Sharding & métadonnées](mongodb/04-sharding-metadonnees.md) |
+| Latence / mémoire / plans | [05 — Performance & WiredTiger](mongodb/05-performance-wiredtiger.md) |
+| Reprise / PITR | [06 — Backups & PRA](mongodb/06-pitr-pra.md) |
+| Transactions multi-shards | [07 — Transactions distribuées](mongodb/07-transactions-distribuees.md) |
+
+**Versions :** MongoDB 7.0/8.x ; les commandes et leur disponibilité varient selon Atlas, self-managed, le rôle et les privilèges. `mongos` et `mongod` ne sont pas interchangeables.
+
+**Sécurité :** diagnostics non destructifs privilégiés ; `validate` peut bloquer et modifier certaines métadonnées, les reprises/topologies sont soumises à décision formelle. Expurger noms internes, logs, clés et données métier.
+
 **Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
-Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
+Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
