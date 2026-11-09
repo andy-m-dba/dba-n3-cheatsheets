@@ -72,6 +72,23 @@
 
 **Sécurité :** diagnostics non destructifs privilégiés ; `validate` peut bloquer et modifier certaines métadonnées, les reprises/topologies sont soumises à décision formelle. Expurger noms internes, logs, clés et données métier.
 
+## MySQL / MariaDB
+
+| Situation | Fiche |
+|---|---|
+| Incident critique / RCA | [00 — Triage expert & RCA](mysql-mariadb/00-triage-rca.md) |
+| Crash / corruption InnoDB | [01 — Démarrage & corruption](mysql-mariadb/01-demarrage-corruption.md) |
+| Deadlocks / transactions | [02 — Verrous & deadlocks](mysql-mariadb/02-verrous-deadlocks.md) |
+| Régression SQL | [03 — Performance & optimiseur](mysql-mariadb/03-performance-optimiseur.md) |
+| GTID / réplication | [04 — Réplication & divergence](mysql-mariadb/04-replication-gtid.md) |
+| Perte de primaire / quorum | [05 — HA & failover](mysql-mariadb/05-ha-quorum-bascule.md) |
+| Saturation disque / undo | [06 — Redo & stockage](mysql-mariadb/06-stockage-redo-undo.md) |
+| Reprise / restauration | [07 — PITR & PRA](mysql-mariadb/07-pitr-pra.md) |
+
+**Versions :** MySQL 8.0/8.4 et MariaDB 10.11/11.x ; les commandes GTID et les topologies **Group Replication / Galera** sont distinctes. Les vues de supervision demandent des droits adaptés ; Performance Schema peut être désactivé.
+
+**Sécurité :** diagnostics en lecture seule et sorties expurgées ; récupération forcée, reconfiguration, failover, modification de GTID et restauration soumis à autorisation formelle, RPO/RTO et plan de retour.
+
 **Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
-Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
+Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [MySQL](https://dev.mysql.com/doc/refman/8.4/en/) · [MariaDB](https://mariadb.com/docs/server/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
