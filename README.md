@@ -38,6 +38,23 @@
 
 **Sécurité :** diagnostics SQL non destructifs, mais certains contrôles sont coûteux. Bascule, réparation et restauration exigent autorisation formelle et stratégie de retour adaptée.
 
+## Oracle
+
+| Situation | Fiche |
+|---|---|
+| Incident critique / RCA | [00 — Triage expert & RCA](oracle/00-triage-rca.md) |
+| Instance / PDB inaccessible | [01 — Démarrage & recovery](oracle/01-demarrage-recovery.md) |
+| Corruption ORA-01578 | [02 — Intégrité & corruption](oracle/02-corruption-integrite.md) |
+| Services RAC / blocages | [03 — RAC & verrous](oracle/03-rac-services-verrous.md) |
+| Standby / bascule | [04 — Data Guard & failover](oracle/04-data-guard-bascule.md) |
+| ASM / FRA / redo | [05 — ASM & capacité](oracle/05-asm-fra-redo.md) |
+| Régression SQL | [06 — Performance & licences](oracle/06-performance-licences.md) |
+| Restauration / PRA | [07 — RMAN & PITR](oracle/07-rman-pitr-pra.md) |
+
+**Versions :** Oracle Database 19c, avec RAC, ASM et Data Guard uniquement lorsqu'ils sont déployés. Contrôles selon le rôle, le conteneur et les privilèges réels ; licence Diagnostics/Tuning Pack à vérifier avant toute utilisation des fonctionnalités concernées.
+
+**Sécurité :** diagnostics en lecture seule ; les contrôles lourds et toute action corrective nécessitent autorisation, évaluation du RPO/RTO, plan de reprise et validation applicative.
+
 **Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
-Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
+Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
