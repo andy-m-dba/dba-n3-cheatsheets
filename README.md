@@ -89,6 +89,23 @@
 
 **Sécurité :** diagnostics en lecture seule et sorties expurgées ; récupération forcée, reconfiguration, failover, modification de GTID et restauration soumis à autorisation formelle, RPO/RTO et plan de retour.
 
+## Redis
+
+| Situation | Fiche |
+|---|---|
+| Incident critique / RCA | [00 — Triage expert & RCA](redis/00-triage-rca.md) |
+| Saturation mémoire / OOM | [01 — Mémoire & fragmentation](redis/01-memoire-oom-fragmentation.md) |
+| Pics p99 / scripts | [02 — Latence & event loop](redis/02-latence-event-loop.md) |
+| Primaire absent / bascule | [03 — Réplication & Sentinel](redis/03-replication-sentinel-failover.md) |
+| Slots / CLUSTERDOWN | [04 — Cluster & topologie](redis/04-cluster-slots-topologie.md) |
+| AOF / RDB en erreur | [05 — Persistance & recovery](redis/05-persistance-aof-rdb.md) |
+| Reprise / restauration | [06 — Backups & PRA](redis/06-sauvegardes-pra.md) |
+| ACL / clients | [07 — Clients & sécurité](redis/07-clients-acl-securite.md) |
+
+**Versions :** Redis Open Source 7.x et 8.x ; les offres Redis Software/Cloud peuvent différer sur les métriques, ACL et opérations. Sentinel et Redis Cluster ont des modèles de disponibilité distincts.
+
+**Sécurité :** diagnostics non destructifs privilégiés ; resharding, failover, réparation AOF, changements de mémoire et reprise soumis à autorisation formelle, RPO/RTO et retour arrière.
+
 **Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
-Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [MySQL](https://dev.mysql.com/doc/refman/8.4/en/) · [MariaDB](https://mariadb.com/docs/server/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
+Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [MySQL](https://dev.mysql.com/doc/refman/8.4/en/) · [MariaDB](https://mariadb.com/docs/server/) · [Redis](https://redis.io/docs/latest/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
