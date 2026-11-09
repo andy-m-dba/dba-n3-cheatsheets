@@ -21,6 +21,23 @@
 
 **Sécurité :** les diagnostics SQL sont en lecture seule ; les outils de contrôle peuvent néanmoins consommer des ressources ou exiger un arrêt préalable. Toute correction ou opération de reprise exige validation humaine, sauvegarde cohérente, contrôle de l'impact et stratégie de retour.
 
+## SQL Server
+
+| Situation | Fiche |
+|---|---|
+| Incident critique / RCA | [00 — Triage expert & RCA](sqlserver/00-triage-rca.md) |
+| Corruption suspectée | [01 — CHECKDB & intégrité](sqlserver/01-corruption-checkdb.md) |
+| Démarrage impossible | [02 — Recovery & base SUSPECT](sqlserver/02-demarrage-recovery.md) |
+| AG sans primaire / bascule | [03 — Always On & failover](sqlserver/03-always-on-failover.md) |
+| LDF / journal saturé | [04 — Transaction log & VLF](sqlserver/04-log-vlf-recovery.md) |
+| Performance critique | [05 — Waits & Query Store](sqlserver/05-performance-waits-query-store.md) |
+| Deadlocks récurrents | [06 — Extended Events](sqlserver/06-deadlocks-extended-events.md) |
+| Reprise / restauration | [07 — PITR & PRA](sqlserver/07-pitr-pra.md) |
+
+**Versions :** SQL Server 2019, 2022 et 2025 (instances classiques). Pour les DMV, vérifier les droits de la vue : en général `VIEW SERVER STATE` (2019) et `VIEW SERVER PERFORMANCE STATE` (2022+). Azure SQL Database et les configurations cloud peuvent différer.
+
+**Sécurité :** diagnostics SQL non destructifs, mais certains contrôles sont coûteux. Bascule, réparation et restauration exigent autorisation formelle et stratégie de retour adaptée.
+
 **Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
-Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [Versions](https://www.postgresql.org/support/versioning/).
+Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
