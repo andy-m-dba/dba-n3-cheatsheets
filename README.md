@@ -106,6 +106,23 @@
 
 **Sécurité :** diagnostics non destructifs privilégiés ; resharding, failover, réparation AOF, changements de mémoire et reprise soumis à autorisation formelle, RPO/RTO et retour arrière.
 
+## Cassandra
+
+| Situation | Fiche |
+|---|---|
+| Incident critique / RCA | [00 — Triage expert & RCA](cassandra/00-triage-rca.md) |
+| Divergence gossip / schéma | [01 — Ring & topologie](cassandra/01-gossip-schema-topologie.md) |
+| Incohérence / repair | [02 — Repair & tombstones](cassandra/02-repair-tombstones-coherence.md) |
+| Bootstrap / nœud à remplacer | [03 — Streaming & remplacement](cassandra/03-streaming-remplacement.md) |
+| Disque / SSTables / compactions | [04 — Stockage & compactions](cassandra/04-sstables-compactions-capacite.md) |
+| Latence / hot partitions | [05 — Performance & timeouts](cassandra/05-performance-partitions-chaudes.md) |
+| Corruption / démarrage impossible | [06 — Intégrité & SSTables](cassandra/06-demarrage-corruption-sstables.md) |
+| Reprise / restauration | [07 — Backups & PRA](cassandra/07-backups-restauration-pra.md) |
+
+**Versions :** Apache Cassandra 4.1/5.0. `nodetool` dépend de JMX, `cqlsh` de CQL ; adapter ports, TLS et permissions à l'architecture. Des fonctions spécifiques à Cassandra 5.0 exigent une vérification de version.
+
+**Sécurité :** commandes de diagnostic en lecture seule privilégiées ; repair, bootstrap, scrub, retrait de nœud et restauration nécessitent autorisation, capacité disponible, RPO/RTO et plan de retour.
+
 **Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
-Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [MySQL](https://dev.mysql.com/doc/refman/8.4/en/) · [MariaDB](https://mariadb.com/docs/server/) · [Redis](https://redis.io/docs/latest/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
+Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [MySQL](https://dev.mysql.com/doc/refman/8.4/en/) · [MariaDB](https://mariadb.com/docs/server/) · [Redis](https://redis.io/docs/latest/) · [Cassandra](https://cassandra.apache.org/doc/latest/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
