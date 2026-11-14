@@ -17,7 +17,9 @@
 | Risque wraparound | [06 — XID / MXID & vacuum](postgresql/06-wraparound-vacuum.md) |
 | Reprise / PITR | [07 — Sauvegarde & PRA](postgresql/07-pitr-pra.md) |
 
-**Versions :** PostgreSQL 14–18 ; la version 14 atteint sa fin de support le **12 novembre 2026**. Adapter les vues aux versions (ex. `pg_stat_io` à partir de 16).
+**Versions visées :** PostgreSQL 14–18. PostgreSQL 14 est en fin de support depuis le 12 novembre 2026. Adapter les commandes et les droits à la version exploitée.
+
+**Validation PostgreSQL :** 8/8 TP réussis sur PostgreSQL 17.12 en laboratoire Docker, le 14 novembre 2026. Les résultats couvrent les scénarios exécutés sur cette version.
 
 **Sécurité :** les diagnostics SQL sont en lecture seule ; les outils de contrôle peuvent néanmoins consommer des ressources ou exiger un arrêt préalable. Toute correction ou opération de reprise exige validation humaine, sauvegarde cohérente, contrôle de l'impact et stratégie de retour.
 
@@ -123,6 +125,6 @@
 
 **Sécurité :** commandes de diagnostic en lecture seule privilégiées ; repair, bootstrap, scrub, retrait de nœud et restauration nécessitent autorisation, capacité disponible, RPO/RTO et plan de retour.
 
-**Statut :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
+**Statut des autres SGBD :** documentation préparée et contrôlée statiquement, non exécutée sur une instance réelle. Ne jamais publier d'identifiants, chemins internes ou logs bruts.
 
 Documentation : [PostgreSQL](https://www.postgresql.org/docs/18/) · [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/) · [Oracle Database](https://docs.oracle.com/en/database/oracle/oracle-database/19/) · [MongoDB](https://www.mongodb.com/docs/manual/) · [MySQL](https://dev.mysql.com/doc/refman/8.4/en/) · [MariaDB](https://mariadb.com/docs/server/) · [Redis](https://redis.io/docs/latest/) · [Cassandra](https://cassandra.apache.org/doc/latest/) · [Versions PostgreSQL](https://www.postgresql.org/support/versioning/).
